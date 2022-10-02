@@ -1,5 +1,5 @@
 import React from 'react';
-// import '../../index.scss';
+import '../../index.scss';
 
 // Тут список пользователей: https://reqres.in/api/users
 
