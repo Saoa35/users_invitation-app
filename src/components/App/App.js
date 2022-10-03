@@ -16,8 +16,6 @@ function App() {
       .then(res => res.json())
       .then(json => {
         setUsers(json.data)
-
-        console.log(users)
       })
       .catch(error => console.log(error.message))
       .finally(() => setLoading(false))
