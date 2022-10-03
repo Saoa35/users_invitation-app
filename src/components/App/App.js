@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../../index.scss';
+import { User } from '../Users/User';
+// import { Skeleton } from '../Users/Skeleton';
+
 
 const url = 'https://reqres.in/api/users';
 
@@ -13,14 +16,14 @@ function App() {
       .then(json => {
         setUsers(json.data)
 
-        console.log(users)
+        // console.log(users)
       })
       .catch(error => console.log(error.message));
   }, []);
 
   return (
     <div className="App">
-      
+      <User items={users} />
     </div>
   );
 }
