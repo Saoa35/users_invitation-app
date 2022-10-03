@@ -4,7 +4,6 @@ import { User } from './User';
 
 export const Users = ({ items, isLoading, serchValue, onChangeSerchValue }) => {
 
-  console.log(serchValue);
   return (
     <>
       <div className="search">
@@ -23,8 +22,8 @@ export const Users = ({ items, isLoading, serchValue, onChangeSerchValue }) => {
         <ul className="users-list">
           {
             items.filter(obj => {
-              const fullName = obj.first_name + obj.last_name;
-              
+              const fullName = (obj.first_name + ' ' + obj.last_name).toLowerCase();
+              return fullName.includes(serchValue.toLowerCase()) || obj.email.includes(serchValue.toLowerCase());
             }).map((obj) => (
               <User {...obj} key={obj.id}/>
             ))
