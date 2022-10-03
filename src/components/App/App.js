@@ -27,6 +27,10 @@ function App() {
     setSerchValue(e.target.value)
   }
 
+  const onClickInvite = () => {
+    
+  }
+
   return (
     <div className="App">
       <Users 
