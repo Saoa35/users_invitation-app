@@ -15,6 +15,7 @@ function App() {
 
         console.log(users)
       })
+      .catch(error => console.log(error.message));
   }, []);
 
   return (
