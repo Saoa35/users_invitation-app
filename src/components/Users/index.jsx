@@ -3,6 +3,8 @@ import { Skeleton } from './Skeleton';
 import { User } from './User';
 
 export const Users = ({ items, isLoading, serchValue, onChangeSerchValue }) => {
+
+  console.log(serchValue);
   return (
     <>
       <div className="search">
@@ -20,7 +22,10 @@ export const Users = ({ items, isLoading, serchValue, onChangeSerchValue }) => {
       ) : (
         <ul className="users-list">
           {
-            items.map((obj) => (
+            items.filter(obj => {
+              const fullName = obj.first_name + obj.last_name;
+              
+            }).map((obj) => (
               <User {...obj} key={obj.id}/>
             ))
           }
