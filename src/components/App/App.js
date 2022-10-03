@@ -17,9 +17,10 @@ function App() {
       .then(json => {
         setUsers(json.data)
 
-        // console.log(users)
+        console.log(users)
       })
-      .catch(error => console.log(error.message));
+      .catch(error => console.log(error.message))
+      .finally(() => setLoading(false))
   }, []);
 
   return (
