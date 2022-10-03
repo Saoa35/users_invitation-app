@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../index.scss';
-import { User } from '../Users/User';
-// import { Skeleton } from '../Users/Skeleton';
+import { Users } from '../../components/Users';
+import { Success } from '../../components/Success';
 
 
 const url = 'https://reqres.in/api/users';
@@ -9,6 +9,7 @@ const url = 'https://reqres.in/api/users';
 function App() {
 
   const [users, setUsers] = useState([]);
+  const [isLoding, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(url)
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <User items={users} />
+      <Users items={users} isLoading={isLoding} />
     </div>
   );
 }
