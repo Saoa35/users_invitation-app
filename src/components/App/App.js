@@ -10,6 +10,7 @@ function App() {
 
   const [users, setUsers] = useState([]);
   const [isLoding, setLoading] = useState(true);
+  const [serchValue, setSerchValue] = useState('');
 
   useEffect(() => {
     fetch(url)
@@ -21,9 +22,17 @@ function App() {
       .finally(() => setLoading(false))
   }, []);
 
+  const onChangeSerchValue = (e) => {
+    setSerchValue(e.target.value)
+  }
+
   return (
     <div className="App">
-      <Users items={users} isLoading={isLoding} />
+      <Users 
+        items={users} 
+        isLoading={isLoding} 
+        serchValue={serchValue} 
+        onChangeSerchValue={onChangeSerchValue} />
     </div>
   );
 }
