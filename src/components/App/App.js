@@ -27,7 +27,7 @@ function App() {
     setSerchValue(e.target.value)
   }
 
-  const onClickInvite = () => {
+  const onClickInvite = (id) => {
     
   }
 
