@@ -28,7 +28,11 @@ function App() {
   }
 
   const onClickInvite = (id) => {
-    
+    if(invites.includes(id)) {
+      setInvites(prev => prev.filter(_id => id !== id));
+    } else {
+      setInvites(prev => [...prev, id]);
+    }
   }
 
   return (
