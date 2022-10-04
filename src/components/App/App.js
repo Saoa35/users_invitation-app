@@ -41,7 +41,9 @@ function App() {
         items={users} 
         isLoading={isLoding} 
         serchValue={serchValue} 
-        onChangeSerchValue={onChangeSerchValue} />
+        onChangeSerchValue={onChangeSerchValue} 
+        invites={invites}
+        onClickInvite={onClickInvite}/>
     </div>
   );
 }
