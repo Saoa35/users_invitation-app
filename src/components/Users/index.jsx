@@ -2,7 +2,7 @@ import React from 'react';
 import { Skeleton } from './Skeleton';
 import { User } from './User';
 
-export const Users = ({ items, isLoading, serchValue, onChangeSerchValue, invites, onClickInvite }) => {
+export const Users = ({ items, isLoading, serchValue, onChangeSerchValue, invites, onClickInvite, onClickSendInvites }) => {
 
   return (
     <>
@@ -30,7 +30,7 @@ export const Users = ({ items, isLoading, serchValue, onChangeSerchValue, invite
           }
         </ul>
       )}
-      <button className="send-invite-btn">Send invitation</button>
+      <button onClick={onClickSendInvites} className="send-invite-btn">Send invitation</button>
     </>
   );
 };

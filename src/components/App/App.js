@@ -43,16 +43,16 @@ function App() {
   return (
     <div className="App">
       {success ? (
-        <Success />
+        <Success count={invites.length}/>
       ) : (
         <Users 
-        items={users} 
-        isLoading={isLoding} 
-        serchValue={serchValue} 
-        onChangeSerchValue={onChangeSerchValue} 
-        invites={invites}
-        onClickInvite={onClickInvite}
-        onClickSendInvites={onClickSendInvites}/>
+          items={users} 
+          isLoading={isLoding} 
+          serchValue={serchValue} 
+          onChangeSerchValue={onChangeSerchValue} 
+          invites={invites}
+          onClickInvite={onClickInvite}
+          onClickSendInvites={onClickSendInvites}/>
       )}
     </div>
   );
