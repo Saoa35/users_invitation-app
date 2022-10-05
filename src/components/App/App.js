@@ -12,6 +12,7 @@ function App() {
   const [isLoding, setLoading] = useState(true);
   const [serchValue, setSerchValue] = useState('');
   const [invites, setInvites] = useState([]);
+  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     fetch(url)
