@@ -36,6 +36,10 @@ function App() {
     }
   }
 
+  const onClickSendInvites = () => {
+    setSuccess(true);
+  }
+
   return (
     <div className="App">
       {success ? (
@@ -47,7 +51,8 @@ function App() {
         serchValue={serchValue} 
         onChangeSerchValue={onChangeSerchValue} 
         invites={invites}
-        onClickInvite={onClickInvite}/>
+        onClickInvite={onClickInvite}
+        onClickSendInvites={onClickSendInvites}/>
       )}
     </div>
   );
