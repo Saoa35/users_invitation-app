@@ -38,13 +38,17 @@ function App() {
 
   return (
     <div className="App">
-      <Users 
+      {success ? (
+        <Success />
+      ) : (
+        <Users 
         items={users} 
         isLoading={isLoding} 
         serchValue={serchValue} 
         onChangeSerchValue={onChangeSerchValue} 
         invites={invites}
         onClickInvite={onClickInvite}/>
+      )}
     </div>
   );
 }
