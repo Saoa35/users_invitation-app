@@ -1,1 +1,1 @@
-User invitation list, with possibiliti add end delete user
+User invitation list, with possibiliti add end delete user. Stack: HTML, CSS, JS
